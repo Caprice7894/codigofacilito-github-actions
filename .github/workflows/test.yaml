@@ -1,0 +1,13 @@
+name: Run test actions
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  Test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cat README.md
+      - run: echo "Fin"
